@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from "@mui/material";
+import { FC } from "react";
+import { Feed } from "./components/feed/Feed";
+import { Leftbar } from "./components/leftbar/Leftbar";
+import { Navbar } from "./components/header/Navbar";
+import { Rightbar } from "./components/rightbar/Righrbar";
+import { Dialogs } from "./components/dialogs/Dialogs";
+import {Routes, Route} from "react-router-dom"
+import { Profile } from "./components/profile/Profile";
+import { FriendsList } from "./components/friends/FriendsList";
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Grid container>
+        <Grid item sm={2}>
+          <Leftbar />
+        </Grid>
+        <Grid item sm={7}>
+            <Routes>
+                <Route path="/profile" element={<Profile/>}/>
+                <Route path="/posts" element={<Feed/>}/>
+                <Route path="/friends" element={<FriendsList/>}/>
+                <Route path="/dialogs" element={<Dialogs time="20:00"/>}/>
+            </Routes>
+        </Grid>
+        <Grid item sm={3}>
+          <Rightbar />
+        </Grid>
+      </Grid>
     </div>
   );
-}
+};
 
 export default App;
