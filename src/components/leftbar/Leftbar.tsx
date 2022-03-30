@@ -36,10 +36,10 @@ export const Leftbar = () => {
   const cl = useStyles();
   return (
     <Container className={cl.container}>
-      <Link to="/home" className={cl.item}>
-        <Home className={cl.icon} />
+      <Link to="/friends" className={cl.item}>
+      <People className={cl.icon} />
         <Typography className={cl.text} style={{ fontWeight: "bold" }}>
-          Homepage
+          Friends
         </Typography>
       </Link>
       <Link to="/profile" className={cl.item}>
@@ -60,12 +60,12 @@ export const Leftbar = () => {
         Posts 
         </Typography>
       </Link>
-      <Link to="/friends" className={cl.item}>
-        <People className={cl.icon} />
+      {/* <Link to="/home" className={cl.item}>
+        <Home className={cl.icon} />
         <Typography className={cl.text} style={{ fontWeight: "bold" }}>
-        Friends 
+        Homepage 
         </Typography>
-      </Link>
+      </Link> */}
       <Link to="/settings" className={cl.item}>
         <Settings className={cl.icon} />
         <Typography className={cl.text} style={{ fontWeight: "bold" }}>

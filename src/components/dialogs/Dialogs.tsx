@@ -23,7 +23,7 @@ export const Dialogs = (props: DialogsType) => {
           <List sx={{ width: "100%", maxWidth: 360, bgcolor: "#9de529" }}>
             <DialogItem time={props.time} message='привет как дела' name="Vasili Madjar" />
             <DialogItem time={props.time} message='привет все хорошо' name="Dima Dymych" />
-            <DialogItem time={props.time} message='увидимся завтра' name="катя" />
+            <DialogItem time={props.time} message='я тебя люблю' name="бусинка" />
             <DialogItem time={props.time} message=' как дела' name="петя" />
             <DialogItem time={props.time} message='привет ' name="коля" />
           </List>

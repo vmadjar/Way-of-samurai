@@ -6,7 +6,7 @@ import {
   } from "@mui/material";
   import { makeStyles } from "@mui/styles";
 import { useState } from "react";
-import { IUsers } from "../../features/users/postTypes";
+import { IUsers, User } from "../../features/users/postTypes";
   
   const useStyles = makeStyles({
     friend: {
@@ -19,7 +19,8 @@ import { IUsers } from "../../features/users/postTypes";
   });
 
   type FriendPropsType ={
-    user : IUsers
+    user : User,
+    
   }
 
 export const Friend = (props: FriendPropsType) => {
@@ -40,10 +41,10 @@ export const Friend = (props: FriendPropsType) => {
           </Grid>
           <Grid item sm={6}>
           <Typography variant="h6">
-              {props.user}
+              {props.user.name}
          </Typography>
          <Typography variant="h6">
-              Ukraine, Kiev
+              {props.user.id}
          </Typography>
           </Grid>
         </Grid>
